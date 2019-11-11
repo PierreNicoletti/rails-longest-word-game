@@ -1,0 +1,9 @@
+<h1>Result</h1>
+<% if !@is_built_from_grid %>
+<p>Sorry but <em><%= @word %></em> can't be build out of <%= @letters.join(", ") %></p>
+<% elsif !@is_valid %>
+<p>Sorry but <em><%= @word %></em> is not a valid English word</p>
+<% else %>
+<p>Well done !</p>
+<% end %>
+<p><%= link_to "Play again", "/new" %></p>
